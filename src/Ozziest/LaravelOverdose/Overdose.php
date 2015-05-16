@@ -55,6 +55,7 @@ class Overdose  {
                 'critical'   => "ozziest_oversode_critical"
             ];
     }
+
     /**
      * Run the request filter.
      *
@@ -79,7 +80,7 @@ class Overdose  {
         }
     }
 
-/**
+    /**
      * Getting remain time 
      *
      * @return integer
@@ -89,6 +90,7 @@ class Overdose  {
         $recreation = Session::get($this->key->recreation);
         return $recreation - time();
     }
+
     /**
      * Recreation
      *
@@ -102,6 +104,7 @@ class Overdose  {
             throw new Exception($remain);
         }
     }
+
     /**
      * Checking overdose 
      *
@@ -123,6 +126,7 @@ class Overdose  {
             throw new Exception($remain);
         }
     }
+
     /**
      * Overdose is decreasing
      *
@@ -136,6 +140,7 @@ class Overdose  {
             Session::put($this->key->overdose, $overdose);
         }
     }
+
     /**
      * Overdose is increasing
      *
@@ -151,6 +156,7 @@ class Overdose  {
         }
         return true;
     }
+
     /**
      * Getting datas 
      *
@@ -163,6 +169,7 @@ class Overdose  {
                 $this->getOrSet($this->key->overdose, 0)
             ];
     }
+    
     /**
      * Getting or setting session data
      *
